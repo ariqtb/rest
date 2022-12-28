@@ -1,26 +1,53 @@
-GET http://127.0.0.1:3000/products
+GET http://127.0.0.1:3000/product
 
 ###
 
-GET http://127.0.0.1:3000/products/63a9b85bf3c64f6621bed97e
+GET http://127.0.0.1:3000/product/63ac20bec649f2a975411582
 
 ###
-POST http://127.0.0.1:3000/add
+POST http://127.0.0.1:3000/product/add
 Content-Type: application/json
 
 {
-    "title": "Product 2",
-    "price": 55000
+    "title": "Product 12",
+    "price": 55000,
+    "quantity": 2
 }
 
 ###
-PATCH http://127.0.0.1:3000/edit/63a9b85bf3c64f6621bed97e
+PATCH http://127.0.0.1:3000/product/edit/63abffc3b26fc60b435af3e2
 Content-Type: application/json
 
 {
-    "title": "Product Updated 3",
-    "price": 15000
+    "title": "Product Updated",
+    "price": 15000,
+    "quantity": 2
 }
 
 ###
-DELETE http://127.0.0.1:3000/delete/63a9b85bf3c64f6621bed97e
+DELETE http://127.0.0.1:3000/product/delete/63ac20bec649f2a975411582
+
+###
+GET http://127.0.0.1:3000/tweet
+
+###
+GET http://127.0.0.1:3000/tweet/63ac1b8306b87df56b431022
+
+###
+POST http://127.0.0.1:3000/tweet/add
+Content-Type: application/json
+
+{
+    "text": "TESTING5"
+}
+
+###
+PATCH http://127.0.0.1:3000/tweet/edit/63ac1b8306b87df56b431022
+Content-Type: application/json
+
+{
+    "text": "Testing updated 2"
+}
+
+###
+DELETE http://127.0.0.1:3000/tweet/delete/63ac1b8306b87df56b431022

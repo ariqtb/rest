@@ -9,9 +9,9 @@ const {
 module.exports = (app) => {
   const router = require("express").Router();
 
-  router.get("/products", getProducts);
+  router.get("/", getProducts);
 
-  router.get("/products/:id", getProductById);
+  router.get("/:id", getProductById);
 
   router.post("/add", saveProducts);
 
@@ -19,5 +19,5 @@ module.exports = (app) => {
 
   router.delete("/delete/:id", deleteProduct);
 
-  app.use("/", router);
+  app.use("/product", router);
 };

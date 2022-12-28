@@ -27,6 +27,7 @@ exports.saveProducts = async (req, res) => {
   try {
     const ProductSaved = await product.save();
     res.status(201).json(ProductSaved);
+    // res.status(201).json(req.body);
   } catch (err) {
     res.status(400).json({
       message: err.message,

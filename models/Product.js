@@ -8,6 +8,11 @@ module.exports = (mongoose) => {
       type: Number,
       require: true,
     },
+    quantity: {
+      type: Number,
+      require: false,
+      default: 0,
+    },
   });
   return mongoose.model("Products", Product);
 };
