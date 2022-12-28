@@ -1,0 +1,26 @@
+GET http://127.0.0.1:3000/products
+
+###
+
+GET http://127.0.0.1:3000/products/63a9b85bf3c64f6621bed97e
+
+###
+POST http://127.0.0.1:3000/add
+Content-Type: application/json
+
+{
+    "title": "Product 2",
+    "price": 55000
+}
+
+###
+PATCH http://127.0.0.1:3000/edit/63a9b85bf3c64f6621bed97e
+Content-Type: application/json
+
+{
+    "title": "Product Updated 3",
+    "price": 15000
+}
+
+###
+DELETE http://127.0.0.1:3000/delete/63a9b85bf3c64f6621bed97e
